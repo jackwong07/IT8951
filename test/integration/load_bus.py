@@ -7,7 +7,6 @@ from gpiozero import Button
 from bus_functions import *
 
 # API for Bus Times
-API_KEY = 'c148cb26-1a9a-4073-abc7-70b21c262f96'
 STOP_MONITORING_URL = 'https://bustime-classic.mta.info/api/siri/stop-monitoring.json'
 broadway_ns = 550685
 broadway_ew = 552169
