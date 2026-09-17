@@ -12,7 +12,7 @@ def parse_args():
                         'physical device)')
     p.add_argument('-r', '--rotate', default=None, choices=['CW', 'CCW', 'flip'],
                    help='run the tests with the display rotated by the specified value')
-    p.add_argument('-m', '--mirror', action='store_true',
+    p.add_argument('-m', '--mirror', action='store_false',
                    help='Mirror the display (use this if text appears backwards)')
     return p.parse_args()
 
@@ -40,6 +40,7 @@ def main():
     else:
         from IT8951.display import VirtualEPDDisplay
         display = VirtualEPDDisplay(dims=(800, 600), rotate=args.rotate, mirror=args.mirror)
+# dims=(800, 600)
 
     tests += [
         clear_display,

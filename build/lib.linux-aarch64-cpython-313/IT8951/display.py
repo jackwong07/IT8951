@@ -134,7 +134,7 @@ class AutoDisplay:
 
             xy = (diff_box[0], diff_box[1])
             dims = (diff_box[2]-diff_box[0], diff_box[3]-diff_box[1])
-            
+
             self.update(buf.tobytes(), xy, dims, mode)
 
         self.prev_frame = frame
@@ -249,7 +249,7 @@ class VirtualEPDDisplay(AutoDisplay):
     EPD, to allow testing without a physical e-paper device
     '''
 
-    def __init__(self, dims=(1872, 1404), **kwargs):
+    def __init__(self, dims=(800,600), **kwargs):
         AutoDisplay.__init__(self, dims[0], dims[1], **kwargs)
 
         import tkinter as tk

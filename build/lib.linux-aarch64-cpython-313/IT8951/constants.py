@@ -95,5 +95,3 @@ class Registers:
     MBASE = 0x200
     MCSR  = MBASE + 0x0
     LISAR = MBASE + 0x8
-
-
